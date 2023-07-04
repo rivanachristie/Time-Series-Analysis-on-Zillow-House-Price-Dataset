@@ -42,3 +42,30 @@ To further analyze the dataset, we created 4 new columns:
 4. COVID_increase - Difference in prices since the start of COVID i.e. December 2019
 
 # Data Modeling
+We used different statistical and machine learning models like ARIMA, SARIMAX, Prophet model for getting a time series for the mentioned cities. 
+
+## ARIMA Model
+ARIMA stands for Auto-Regressive Integrated Moving Average. It is a form of a regression analysis that gauges the strength of one dependent variable which is relative to other changing variables. The model has 3 parameters p, d, q which are for lag order, degree of differencing, order of moving average respectively. 
+
+![image](https://github.com/rivanachristie/Time-Series-Analysis-on-Zillow-House-Price-Dataset/assets/98617715/e2a46c83-a690-48ba-bce5-5798a56bfaa5)
+
+## SARIMA Model
+SARIMA stands for Seasonal Auto-Regressive Integrated Moving Average. It adds the seasonality component to the ARIMA model, for a better forecasting of time series. It contains 3 more parameters in addition to the p, d, q from the ARIMA model. The parameters are P, D, Q which stands for seasonal autoregressive order, seasonal difference order and seasonal moving average order respectively.
+
+![image](https://github.com/rivanachristie/Time-Series-Analysis-on-Zillow-House-Price-Dataset/assets/98617715/e1569450-4ff9-45c0-aafa-47d6ecbe2755)
+
+## Prophet Model
+Prophet is open-source software released by Facebook’s Data Science team. Prophet is a procedure for forecasting time series data based on an additive model. In this model the non-linear trends fit yearly, weekly, and daily seasonality, also the holiday effects can be added in the modeling. It is robust to missing data and shifts in the trend, and typically handles outliers well.
+
+![image](https://github.com/rivanachristie/Time-Series-Analysis-on-Zillow-House-Price-Dataset/assets/98617715/4a047a8d-6271-46e5-9e1b-4a890ec4b210)
+
+# Model Comparison
+We compared the RMSE values for the three models for each city and visualized them using a bar chart. From the plot, we can see that SARIMAX has higher RMSE values, whereas Prophet has low or average values for RMSE. So, we can conclude that the Prophet model gave the best results.
+
+![image](https://github.com/rivanachristie/Time-Series-Analysis-on-Zillow-House-Price-Dataset/assets/98617715/b8e9ced6-5898-4d40-a666-43cd620d2339)
+
+# Failure and Future Scope
+Currently, the housing market in the US is undergoing a market correction, with an increase in mortgage rates and decline in house prices. This is also a result of the huge number of houses that are currently unsold. This occurrence could not be predicted by the model solely based on the house price data provided. Hence, we can consider this an example of a failure. In order to overcome this failure or to reduce its effect, we could utilize other datasets that provide information related to other external factors that affect house prices.
+
+
+
